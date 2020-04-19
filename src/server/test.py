@@ -27,4 +27,7 @@ def error():
 
 @app.errorhandler(401)
 def page_not_found(error):
-    return {"key": "value"}, 401
+    error_msg = {
+        "msg": "You are not authorized, check your input data."
+    }
+    return error_msg, 401
